@@ -5,11 +5,11 @@ import java.lang.Exception
 fun main() {
 
     fun sum(list: List<Int>): Int {
-        var sum_value = 0
+        var sumValue = 0
         for (num in list) {
-            sum_value += num
+            sumValue += num
         }
-        return sum_value
+        return sumValue
     }
 
     fun max(list: List<Int>): Int {
@@ -24,20 +24,21 @@ fun main() {
                 return ind
             }
         }
-        return -1
+        return null
     }
 
     fun isOdd(number: Int): Boolean = number % 2 == 1
 
     fun evenItems(list: List<Int>): List<Int> {
-        val even_list : MutableList<Int> = mutableListOf()
+        val evenList : MutableList<Int> = mutableListOf()
         list.forEach() {
             if (!isOdd(it)) {
-                even_list.add(it)
+                evenList.add(it)
             }
         }
         //Question : I didn't change the return type to MutableList, yet there are no errors! Bug?
-        return even_list
+        //answer : evenList was smart casted to MutableList
+        return evenList
     }
 
     fun sumTest() {
